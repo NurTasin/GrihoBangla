@@ -1,0 +1,31 @@
+.fit-cover {
+  object-fit: cover;
+}
+
+.dropdown {
+  margin-bottom: 1rem;
+}
+
+.dropdown-btn {
+  width: 100%;
+  border-radius: 1rem;
+}
+
+.dd-menu {
+  width: 100%;
+  text-align: center;
+}
+
+select {
+  margin-bottom: .7rem;
+}
+
+.required {
+  color: red;
+  margin-left: 0.3rem;
+}
+
+.form-check {
+  margin-top: 1rem;
+}
+

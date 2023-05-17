@@ -1,0 +1,31 @@
+#main-button {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.ad-details-btn {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 1rem;
+}
+
+.result-card {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 2rem;
+}
+
+.price-tag {
+  position: relative;
+  text-align: center;
+}
+
+.ad-btn {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
