@@ -1,4 +1,4 @@
-const BACKEND_URL = "https://grihobanglabd.cyclic.app"
+const BACKEND_URL = "http://localhost:3000"
 
 function IsNotFilled(obj) { return obj.type==="checkbox"? !obj.checked: (obj.value.trim() === "") }
 let OnLoggedIn;
