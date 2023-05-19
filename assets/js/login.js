@@ -48,6 +48,8 @@ LoginButton.addEventListener("click", (ev) => {
                 data = JSON.parse(txt);
                 if (data.status === "Succeed") {
                     alert(`Login Successful, welcome ${data.data.name}`);
+                    localStorage.setItem("LOGGED_IN","1");
+                    window.location.href="/dash.html";
                 } else {
                     alert(`${data.msg}`);
                 }
