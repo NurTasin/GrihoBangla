@@ -33,15 +33,7 @@ fetch(BACKEND_URL + "/api/v1/user/me",{
                 let objs = Object.values(adsData.data);
                 let innerTable=""
                 for(let i=0;i<objs.length;i++){
-                    innerTable+=`<tr>
-                    <td><a href="/ad?id=${objs[i]['id']}">${objs[i]['name']}</td>
-                    <td>
-                        <div class="btn-group btn-group-sm" role="group" style="height: 1.5rem;">
-                            <a class="btn btn-primary" role="button" style="padding-top: 0;" href="/editAd?id=${objs[i]['id']}">Edit</a>
-                            <a class="btn btn-primary" role="button" style="padding-top: 0;margin-left: 6px;" href="/deleteAd?id=${objs[i]['id']}>Delete</a>
-                        </div>
-                    </td>
-                </tr>`
+                    innerTable+=`<tr><td><a href="/ad?id=${objs[i]['id']}">${objs[i]['name']}</td><td><div class="btn-group btn-group-sm" role="group" style="height: 1.5rem;"><a class="btn btn-primary" role="button" style="padding-top: 0;" href="/editAd?id=${objs[i]['id']}">Edit</a><a class="btn btn-primary" role="button" style="padding-top: 0;margin-left: 6px;" href="/deleteAd?id=${objs[i]['id']}">Delete</a></div></td></tr>`
                 }
                 AdTable.innerHTML=innerTable;
             }).catch(err=>{console.error(err);alert("An Error Occured. Please Contact Admins");});
