@@ -25,7 +25,7 @@ fetch(BACKEND_URL + "/api/v1/user/me",{
             fetch(BACKEND_URL+"/api/v1/ad/bulkGet",{
                 method:"POST",
                 credentials:"include",
-                body:JSON.stringify(Userdata.ads),
+                body:JSON.stringify({ads:Userdata.ads}),
                 headers:{
                     "Content-Type":"application/json"
                 }
