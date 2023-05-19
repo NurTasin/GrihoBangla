@@ -42,7 +42,7 @@ jobs:
   deploy:
     environment:
       name: github-pages
-      url: "nurtasin.github.io"
+      url: "https://nurtasin.github.io/GrihoBangla"
     runs-on: ubuntu-latest
     needs: build
     steps:
