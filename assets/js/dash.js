@@ -30,7 +30,7 @@ fetch(BACKEND_URL + "/api/v1/user/me",{
                     "Content-Type":"application/json"
                 }
             }).then(res=>res.json()).then(adsData=>{
-                let objs = Object.values(adsData);
+                let objs = Object.values(adsData.data);
                 let innerTable=""
                 for(let i=0;i<objs.length;i++){
                     innerTable+=`<tr>
