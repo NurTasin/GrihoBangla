@@ -2,6 +2,7 @@ const UsernameField = document.getElementById("username")
 const PasswordField = document.getElementById("password")
 const LoginButton = document.getElementById("login-btn")
 
+const QueryParams = new URLSearchParams(window.location.search);
 function validateForm(onValidate) {
     let ToCheck = [UsernameField, PasswordField];
     let view = false;
@@ -49,7 +50,11 @@ LoginButton.addEventListener("click", (ev) => {
                 if (data.status === "Succeed") {
                     alert(`Login Successful, welcome ${data.data.name}`);
                     localStorage.setItem("LOGGED_IN","1");
-                    window.location.href="/dash.html";
+                    if(QueryParams.has("redirect")){
+                        window.location.href=QueryParams.get("redirect");
+                    }else{
+                        window.location.href="/dash.html";
+                    }
                 } else {
                     alert(`${data.msg}`);
                 }

@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Log in - GrihoBangla</title>
+    <title>Product - GrihoBangla</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;display=swap">
     <link rel="stylesheet" href="assets/css/Projects-Grid-Horizontal-images.css">
@@ -20,54 +20,94 @@
                     <li class="nav-item"></li>
                     <li class="nav-item"></li>
                     <li class="nav-item"><a class="nav-link" href="contacts.html">Contacts</a></li>
-                    <li class="nav-item"><a class="nav-link active" id="signin-link" href="/login.html">Log In</a></li>
+                    <li class="nav-item"><a class="nav-link" id="signin-link" href="/login.html">Log In</a></li>
                     <li class="nav-item"><a class="nav-link" id="signup-link" href="signup.html"></a></li>
                 </ul>
             </div>
         </div>
     </nav>
-    <section style="padding-top: 0px;">
-        <div class="container" style="padding-top: 0px;">
-            <div class="row mb-4 mb-lg-5">
-                <div class="col-md-8 col-xl-6 text-center mx-auto">
-                    <p class="fw-bold text-success mb-2">Login</p>
-                    <h2 class="fw-bold">Welcome back</h2>
+    <section style="padding: 0px 0px;padding-top: 0px;">
+        <div class="container" id="body" style="padding-top: 16px;padding-bottom: 32px;">
+            <p id="ad-type">&nbsp;&nbsp;&nbsp;</p>
+            <div class="carousel slide" data-bs-ride="false" id="imagePreview">
+                <div class="carousel-inner">
+                    <div class="carousel-item active"><img class="w-100 d-block" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png" alt="Slide Image"></div>
+                    <div class="carousel-item"><img class="w-100 d-block" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png" alt="Slide Image"></div>
+                    <div class="carousel-item"><img class="w-100 d-block" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png" alt="Slide Image"></div>
                 </div>
+                <div><a class="carousel-control-prev" href="#imagePreview" role="button" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span><span class="visually-hidden">Previous</span></a><a class="carousel-control-next" href="#imagePreview" role="button" data-bs-slide="next"><span class="carousel-control-next-icon"></span><span class="visually-hidden">Next</span></a></div>
+                <ol class="carousel-indicators">
+                    <li data-bs-target="#imagePreview" data-bs-slide-to="0" class="active"></li>
+                    <li data-bs-target="#imagePreview" data-bs-slide-to="1"></li>
+                    <li data-bs-target="#imagePreview" data-bs-slide-to="2"></li>
+                </ol>
             </div>
-            <div class="row d-flex justify-content-center">
-                <div class="col-md-6 col-xl-4">
-                    <div class="card">
-                        <div class="card-body text-center d-flex flex-column align-items-center" style="padding-top: 0px;">
-                            <div class="bs-icon-xl bs-icon-circle bs-icon-primary shadow bs-icon my-4"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-person">
-                                    <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"></path>
-                                </svg></div>
-                            <form method="post">
-                                <div class="mb-3"><input class="form-control" type="email" id="username" name="username" placeholder="Username" autocomplete="off"></div>
-                                <div class="mb-3"><input class="form-control" type="password" id="password" name="password" placeholder="Password"></div><script src="https://www.google.com/recaptcha/enterprise.js?render=6LfOkBkmAAAAALcSO4oCRPev22rtvPnCIxDD84Q_"></script>
-<script defer="true">
-    let VerifiedCaptcha=false;
-    let CaptchaToken="";
-document.addEventListener('DOMContentLoaded', function() {
-            document.getElementById("login-btn").hidden=true; grecaptcha.enterprise.ready(function() {
- grecaptcha.enterprise.execute('6LfOkBkmAAAAALcSO4oCRPev22rtvPnCIxDD84Q_', {action: 'login'}).then(function(token) {
-       VerifiedCaptcha=true;
-        CaptchaToken=token;
-     document.getElementById("login-btn").hidden=false;
-    });
-});
-        });
-   
-</script>
-                                <div class="mb-3"><button class="btn btn-primary shadow d-block w-100" id="login-btn" type="button">Log in</button></div>
-                                <p class="text-muted">Forgot your&nbsp;<a href="#">password</a>&nbsp;?</p>
-                                <p class="fs-6 fw-semibold text-muted">New to Griho Bangla? <a href="signup.html">Register</a>.</p>
-                            </form>
-                        </div>
-                    </div>
+            <p class="text-end" id="time-added-label" style="margin-bottom: 3px;">12/5/2023 (5:00 PM)</p>
+            <h1 class="text-break fs-1 fw-bold text-center" id="ad-title" style="margin-top: 13px;">Ad Title</h1>
+            <p class="text-center" id="ad-description">Description</p>
+            <p class="fw-bolder text-center border-4 shadow" id="ad-rent-cost" style="border: solid red 2px;width: auto;border-color: green;border-radius: 1rem;padding-top: 0.3rem;padding-bottom: 0.3rem;">Taka</p>
+            <div>
+                <h4>Location</h4>
+                <div class="table-responsive text-start">
+                    <table class="table table-striped table-dark">
+                        <tbody id="location-table">
+                            <tr>
+                                <td>Division</td>
+                                <td>Rajshahi</td>
+                            </tr>
+                            <tr>
+                                <td>District</td>
+                                <td>Chapai Nawabganj</td>
+                            </tr>
+                            <tr>
+                                <td>Upazila / Police Station</td>
+                                <td>Sadar</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h4 style="margin-top: 10px;">Contact</h4><button class="btn btn-primary" id="ad-contact-reveal-btn" type="button" style="position: relative;left: 50%;transform: translateX(-50%);">Reveal</button>
+                <div class="table-responsive text-start">
+                    <table class="table table-striped table-dark">
+                        <tbody id="contact-table">
+                            <tr>
+                                <td>Name</td>
+                                <td>Ei Barir Malik</td>
+                            </tr>
+                            <tr>
+                                <td>Phone Number</td>
+                                <td>01XXXXXXXXX</td>
+                            </tr>
+                            <tr>
+                                <td>Whatsapp</td>
+                                <td>01XXXXXXXXX</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
-    </section>
+    </section><button class="btn btn-sm" id="report-btn" type="button" style="position: relative;left: 50%;transform: translateX(-50%);border: solid #ff4747 1px;margin-bottom: 2rem;">Report This Ad</button>
+    <div class="modal fade text-dark" role="dialog" tabindex="-1" id="report-modal" style="background: rgba(12,12,12,0.75);">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Submit A Report</h4><button class="btn-close" id="modal-close" type="button" aria-label="Close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body" style="height: 159.781px;">
+                    <p class="text-dark">Why Do You Want To Report This Ad?</p><select class="border rounded-pill" id="report-cause" name="cause" style="width: 250px;" value="Unselected">
+                        <option value="">Select Your Reason</option>
+                        <option value="FAKE_DATA">Provides data that are fake</option>
+                        <option value="NOT_AVAILABLE">This property is not available for rent anymore</option>
+                        <option value="NSFW_IMAGE">Contains NSFW (Nudity, Self harm) images</option>
+                        <option value="FAKE_CONTACT">Fake Contact Numbers</option>
+                        <option value="OTHER">Other</option>
+                    </select><input type="text" id="report-explain" placeholder="Explain the cause">
+                </div>
+                <div class="modal-footer"><button class="btn btn-light" type="button" data-bs-dismiss="modal">Cancel</button><button class="btn btn-primary" id="report-submit-btn" type="button">Submit</button></div>
+            </div>
+        </div>
+    </div>
     <footer class="bg-dark">
         <div class="container py-4 py-lg-5">
             <div class="row justify-content-center">
@@ -120,7 +160,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/bold-and-dark.js"></script>
     <script src="assets/js/config.js"></script>
-    <script src="assets/js/login.js"></script>
+    <script src="assets/js/z_adViewer.js"></script>
 </body>
 
 </html>
