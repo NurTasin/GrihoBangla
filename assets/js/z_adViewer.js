@@ -187,10 +187,14 @@ ReportBtn.addEventListener("click", (ev) => {
                 fetch(BACKEND_URL + "/api/v1/report/submit", {
                     method: "POST",
                     credentials: "include",
+                    mode:"no-cors",
+                    headers:{
+                        "Content-Type":"application/json"
+                    },
                     body: JSON.stringify({
                         data: {
                             contentId: QueryParams.get("id"),
-                            cause: ModalDropDown.value
+                            cause
                         }
                     })
                 }).then(res => res.json()).then(data => {
@@ -199,14 +203,16 @@ ReportBtn.addEventListener("click", (ev) => {
                         alert("Report Submitted Successfully! We appreciate your feedback.");
                     }else if(data.code==="400" && msg==="You have to login to use this feature."){
                         localStorage.setItem("LOGGED_IN","0");
-                        console.log("Login Session Expired. Please Login Again.");
+                        alert("Login Session Expired. Please Login Again.");
                         window.location.href=`/login.html?redirect=${window.location.href}`
                     }
                 }).catch(err => {
                     console.log(err)
+                    alert("Server Busy. Try Again Later.");
+                    ReportModal.hide();
                 })
             } else {
-                alert("You Have To Select A Cause.");
+                alert("Please Select Your Reason.");
             }
         })
         ReportModal.show();
