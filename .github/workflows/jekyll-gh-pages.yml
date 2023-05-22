@@ -62,4 +62,4 @@ jobs:
           token: ${{ secrets.TELEGRAM_TOKEN }}
           format: markdown
           message: |
-            Deploying ${{ repo }} -> ${{ commit.sha }} was successful.
+            Deploying ${{ GITHUB_REPOSITORY }} -> ${{ GITHUB_SHA }} was successful.
