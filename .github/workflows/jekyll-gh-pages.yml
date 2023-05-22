@@ -49,3 +49,16 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
+  
+  #Send A Telegram Message saying it was deployed
+  notify:
+    name: Notify Telegram
+    runs-on: ubuntu-latest
+    steps:
+      - name: send telegram message on deployment completed
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{ secrets.TELEGRAM_TO }}
+          token: ${{ secrets.TELEGRAM_TOKEN }}
+          format: markdown
+          message: Deploying ${{ repo }} -> ${{ commit.sha }} was successful.
