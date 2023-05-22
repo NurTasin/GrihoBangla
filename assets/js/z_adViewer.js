@@ -184,13 +184,12 @@ ReportBtn.addEventListener("click", (ev) => {
                 } else {
                     cause = ModalDropDown.value
                 }
+                let head = new Headers()
+                head.append("Content-Type","application/json");
                 fetch(BACKEND_URL + "/api/v1/report/submit", {
                     method: "POST",
                     credentials: "include",
-                    mode:"no-cors",
-                    headers:{
-                        "Content-Type":"application/json"
-                    },
+                    headers:head,
                     body: JSON.stringify({
                         data: {
                             contentId: QueryParams.get("id"),
